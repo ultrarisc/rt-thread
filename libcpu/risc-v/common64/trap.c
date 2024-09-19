@@ -377,8 +377,7 @@ void handle_trap(rt_ubase_t scause, rt_ubase_t stval, rt_ubase_t sepc,
             rt_backtrace_frame(cur_thr, &frame);
         }
 
-        while (1)
-            ;
+       rt_thread_suspend(cur_thr);
     }
 _exit:
     EXIT_TRAP;

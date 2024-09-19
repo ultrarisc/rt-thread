@@ -31,17 +31,19 @@
 
 #### 2.运行模式配置
 
-| 选项            |  默认值 | 说明                                                                                                 |
-| --------------- | --- | ---------------------------------------------------------------------------------------------------- |
-| RISCV_S_MODE    | 打开 | 系统启动后是否运行在S态，关闭时系统将运行在M态；目前系统存在bug尚不可直接运行在M态，故此开关必须打开 |
-| RT_USING_SMART  | 关闭 | 是否开启RTThread SMART版本，开启后系统运行在S+U态，且会开启MMU页表(satp);关闭时系统仅运行在S态，MMU关闭(satp为bare translation)    |
-| ARCH_USING_ASID | 关闭 | MMU是否支持asid                                                                     |
+| 选项              | 默认值 | 说明                                                                                                                            |
+| ----------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------- |
+| RISCV_S_MODE      | 打开   | 系统启动后是否运行在S态，关闭时系统将运行在M态；目前系统存在bug尚不可直接运行在M态，故此开关必须打开                            |
+| RT_USING_SMART    | 关闭   | 是否开启RTThread SMART版本，开启后系统运行在S+U态，且会开启MMU页表(satp);关闭时系统仅运行在S态，MMU关闭(satp为bare translation) |
+| ARCH_USING_ASID   | 关闭   | MMU是否支持asid                                                                                                                 |
+| ARCH_RISCV_FPU    | 打开   | 是否支持fpu                                                                                                                     |
+| ARCH_RISCV_VECTOR | 关闭   | 是否支持vector                                                                                                                  |
 
 #### 3.移植指南
 
 （1）增加新的CPU支持
 
-创建`libcpu/risc-v/<VENDOR_NAME>/<CPU_NAME>`新目录，同时在`libcpu/risc-v/SConscript`中增加该CPU。
+创建 `libcpu/risc-v/<VENDOR_NAME>/<CPU_NAME>`新目录，同时在 `libcpu/risc-v/SConscript`中增加该CPU。
 
 （2）PLIC中断控制器支持
 
@@ -49,4 +51,4 @@
 
 （3）串口uart支持
 
-目前串口驱动在各bsp目录下，可参考`bsp/qemu-virt64-riscv/driver/drv_uart.[c|h]`
+目前串口驱动在各bsp目录下，可参考 `bsp/qemu-virt64-riscv/driver/drv_uart.[c|h]`
