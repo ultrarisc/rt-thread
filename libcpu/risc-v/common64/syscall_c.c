@@ -19,11 +19,9 @@
 #include <rtdbg.h>
 
 #include <stdint.h>
-#include <mmu.h>
 #include <page.h>
 #include <lwp_user_mm.h>
 
-#include "riscv_mmu.h"
 #include "stack.h"
 
 typedef rt_ubase_t (*syscallfunc_t)(rt_ubase_t, rt_ubase_t, rt_ubase_t, rt_ubase_t, rt_ubase_t, rt_ubase_t, rt_ubase_t);

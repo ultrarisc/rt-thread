@@ -16,7 +16,6 @@
 #include <rtthread.h>
 #include <mm_aspace.h>
 #include "sbi.h"
-#include "riscv_mmu.h"
 
 #define HANDLE_FAULT(ret)                                                      \
     if (__builtin_expect((ret) != SBI_SUCCESS, 0))                             \

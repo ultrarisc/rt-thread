@@ -23,7 +23,7 @@
 #include <mm_aspace.h>
 #include <mm_page.h>
 #include <mmu.h>
-#include <riscv_mmu.h>
+#include <rv64_mmu.h>
 #include <tlb.h>
 
 #ifdef RT_USING_SMART

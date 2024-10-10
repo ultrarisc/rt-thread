@@ -14,7 +14,6 @@
 
 #include <rtthread.h>
 #include <mm_aspace.h>
-#include "riscv_mmu.h"
 #include "stack.h"
 
 #define WORD                            sizeof(rt_base_t)
@@ -40,7 +39,7 @@ rt_inline rt_err_t _bt_kaddr(rt_ubase_t *fp, struct rt_hw_backtrace_frame *frame
 #ifdef RT_USING_SMART
 #include <lwp_arch.h>
 #include <lwp_user_mm.h>
-
+#include "rv64_mmu.h"
 rt_inline rt_err_t _bt_uaddr(rt_lwp_t lwp, rt_ubase_t *fp, struct rt_hw_backtrace_frame *frame)
 {
     rt_err_t rc;

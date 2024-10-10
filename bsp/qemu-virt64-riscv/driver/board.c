@@ -25,7 +25,6 @@
 #include "stack.h"
 
 #ifdef RT_USING_SMART
-#include "riscv_mmu.h"
 #include "mmu.h"
 #include "page.h"
 #include "lwp_arch.h"
