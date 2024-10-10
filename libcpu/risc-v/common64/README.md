@@ -43,7 +43,7 @@
 
 （1）增加新的CPU支持
 
-创建 `libcpu/risc-v/<VENDOR_NAME>/<CPU_NAME>`新目录，同时在 `libcpu/risc-v/SConscript`中增加该CPU。
+创建`libcpu/risc-v/<VENDOR_NAME>/<CPU_NAME>`新目录，同时在`libcpu/risc-v/SConscript`中增加该CPU。
 
 （2）PLIC中断控制器支持
 
@@ -51,4 +51,4 @@
 
 （3）串口uart支持
 
-目前串口驱动在各bsp目录下，可参考 `bsp/qemu-virt64-riscv/driver/drv_uart.[c|h]`
+目前串口驱动在各bsp目录下，可参考`bsp/qemu-virt64-riscv/driver/drv_uart.[c|h]`
